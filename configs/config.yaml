@@ -1,0 +1,36 @@
+project:
+  name: vertexfleet-agent
+  version: 0.1.0
+  seed: 42
+
+paths:            # relative to project root, resolved with pathlib
+  data_raw: data/raw
+  data_processed: data/processed
+  data_synthetic: data/synthetic
+  artifacts: 05_ml/artifacts
+  audit_log: logs/audit.jsonl
+
+simulation:
+  n_vehicles: 50
+  n_zones: 8
+  n_days: 90
+
+thresholds:
+  percept_min_quality: 0.6        # below this a percept is marked low-quality
+  entailment_support_min: 0.8     # probabilistic support needed to call something "supported"
+  abstain_below_confidence: 0.55  # agent abstains / escalates below this
+  failure_risk_high: 0.7          # predicted failure prob that triggers a maintenance proposal
+
+agent:
+  max_iterations: 5
+  require_approval_for: [dispatch_maintenance, reposition_fleet]
+  allowed_tools: [query_fleet_db, lookup_service_history, write_report, propose_action]
+
+models:
+  demand_forecaster: {name: baseline_mean, version: "0.0.1"}
+  failure_classifier: {name: baseline_logistic, version: "0.0.1"}
+  maintenance_note_nlp: {name: tfidf_baseline, version: "0.0.1"}
+
+features:
+  use_llm_component: false
+  enable_ui: true

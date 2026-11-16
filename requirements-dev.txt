@@ -1,0 +1,11 @@
+-r requirements.txt
+gradio>=4.0
+matplotlib>=3.8
+seaborn>=0.13
+pgmpy>=0.1.25
+hmmlearn>=0.3
+python-constraint>=1.4
+shap>=0.45
+torch>=2.2
+transformers>=4.40
+mlflow>=2.12
