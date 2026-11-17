@@ -34,3 +34,17 @@ models:
 features:
   use_llm_component: false
   enable_ui: true
+
+sim_details:
+  grid_size: 12          # city map is grid_size x grid_size
+  train_days: 70         # days before this go to training, the rest to testing
+
+logic_rules:
+  vibration_high: 4.0    # mm/s
+  overdue_days: 20       # days since service
+  engine_hot: 100.0      # degrees C
+
+csp:
+  n_flagged: 9           # vehicles to schedule per day
+  extra_travel_blocks: 3 # max blocks farther than the nearest depot
+  urgent_vibration: 4.5  # mm/s; urgent vehicles must be seen in shift 1 or 2

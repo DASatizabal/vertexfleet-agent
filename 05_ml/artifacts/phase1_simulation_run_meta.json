@@ -1,0 +1,20 @@
+{
+  "name": "phase1_simulation",
+  "created_utc": "2026-11-17T00:32:49.037194+00:00",
+  "seed": 42,
+  "project_version": "0.1.0",
+  "config_sha256": "11f73e4453dd23907d31dd5fe35e34a139b474d9defcb896ac8b9c270912ef90",
+  "git_commit": "885036ba5f244a6aa210ba36dc23446afe7168c3",
+  "git_uncommitted_changes": true,
+  "python_version": "3.11.4",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "pydantic": "2.14.3"
+  },
+  "extra": {
+    "demand_rmse": 3.527,
+    "logreg_recall": 0.709
+  }
+}
