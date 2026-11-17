@@ -1,0 +1,55 @@
+{
+  "health_hmm": {
+    "hmm_accuracy": 0.976,
+    "threshold_accuracy": 0.819,
+    "transition_matrix": {
+      "Healthy": {
+        "Healthy": 0.944,
+        "Worn": 0.036,
+        "Critical": 0.249
+      },
+      "Worn": {
+        "Healthy": 0.055,
+        "Worn": 0.863,
+        "Critical": 0.002
+      },
+      "Critical": {
+        "Healthy": 0.001,
+        "Worn": 0.101,
+        "Critical": 0.749
+      }
+    },
+    "top_critical_last_day": {
+      "V28": {
+        "Worn": 0.0,
+        "Critical": 1.0,
+        "Healthy": 0.0
+      },
+      "V17": {
+        "Worn": 0.001,
+        "Critical": 0.999,
+        "Healthy": 0.0
+      },
+      "V24": {
+        "Worn": 0.005,
+        "Critical": 0.995,
+        "Healthy": 0.0
+      },
+      "V38": {
+        "Worn": 0.801,
+        "Critical": 0.199,
+        "Healthy": 0.0
+      },
+      "V13": {
+        "Worn": 0.834,
+        "Critical": 0.166,
+        "Healthy": 0.0
+      }
+    }
+  },
+  "demand": {
+    "rmse_seasonal_rain": 3.267,
+    "rmse_mean_baseline": 3.527,
+    "rain_lift": 1.369
+  }
+}

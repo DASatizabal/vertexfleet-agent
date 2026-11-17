@@ -1,0 +1,79 @@
+{
+  "edges": [
+    [
+      "Rain",
+      "Wear"
+    ],
+    [
+      "OldVehicle",
+      "Wear"
+    ],
+    [
+      "Overdue",
+      "Wear"
+    ],
+    [
+      "Wear",
+      "Vibration"
+    ],
+    [
+      "Wear",
+      "EngineTemp"
+    ],
+    [
+      "Wear",
+      "FailureSoon"
+    ]
+  ],
+  "queries": {
+    "no evidence": {
+      "p_failure": 0.17,
+      "p_wear": {
+        "Healthy": 0.644,
+        "Worn": 0.258,
+        "Critical": 0.098
+      }
+    },
+    "high vibration": {
+      "p_failure": 0.64,
+      "p_wear": {
+        "Healthy": 0.012,
+        "Worn": 0.256,
+        "Critical": 0.732
+      }
+    },
+    "high vibration + rain": {
+      "p_failure": 0.636,
+      "p_wear": {
+        "Healthy": 0.014,
+        "Worn": 0.262,
+        "Critical": 0.724
+      }
+    },
+    "high vibration + hot engine": {
+      "p_failure": 0.775,
+      "p_wear": {
+        "Healthy": 0.0,
+        "Worn": 0.006,
+        "Critical": 0.994
+      }
+    },
+    "low vibration + normal temp": {
+      "p_failure": 0.051,
+      "p_wear": {
+        "Healthy": 0.932,
+        "Worn": 0.068,
+        "Critical": 0.0
+      }
+    },
+    "old, overdue, medium vibration": {
+      "p_failure": 0.3,
+      "p_wear": {
+        "Healthy": 0.126,
+        "Worn": 0.765,
+        "Critical": 0.109
+      }
+    }
+  },
+  "test_roc_auc": 0.838
+}
