@@ -4,5 +4,9 @@
   "python.testing.pytestArgs": ["tests"],
   "python.analysis.extraPaths": ["${workspaceFolder}/src"],
   "jupyter.notebookFileRoot": "${workspaceFolder}",
-  "terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFolder}/src"}
+  "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder}/src",
+    "PATH": "C:\\Program Files\\Git\\cmd;${env:PATH}"
+  }
 }
