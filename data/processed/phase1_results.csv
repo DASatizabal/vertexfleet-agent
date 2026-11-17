@@ -1,0 +1,10 @@
+Hypothesis,Method,Metric,Result,Failure cases
+A* finds optimal routes with fewer expansions than BFS,Search: BFS,avg nodes expanded / optimal rate,44.25 / 100%,None observed
+A* finds optimal routes with fewer expansions than BFS,Search: Greedy,avg nodes expanded / optimal rate,9.25 / 100%,None on this map; greedy has no optimality guarantee
+A* finds optimal routes with fewer expansions than BFS,Search: A*,avg nodes expanded / optimal rate,15.62 / 100%,None observed
+MRV reduces assignments tried,CSP: Backtracking + MRV,avg / max assignments tried (30 daily puzzles),166.63 / 3232,8 of 30 days have no feasible schedule under the shift and travel limits; the agent must escalate those to a human
+MRV reduces assignments tried,CSP: Plain backtracking,avg / max assignments tried (30 daily puzzles),460.03 / 3274,8 of 30 days have no feasible schedule under the shift and travel limits; the agent must escalate those to a human
+Simple rules catch most upcoming failures,Logic: 2 Horn rules,precision / recall,0.68 / 0.45,78 missed failures; 54% were Worn vehicles whose telemetry still looked normal
+Probabilities from telemetry beat fixed rules,Uncertainty: Gaussian naive Bayes,precision / recall / ROC AUC,0.66 / 0.58 / 0.85,Independence assumption double-counts correlated vibration and temperature; overconfident probabilities
+Historical averages give a usable demand forecast,ML: mean by zone/hour/weekend,RMSE / MAE,3.53 / 2.68,Ignores rain: MAE rises from 2.54 (dry) to 3.03 (rain)
+A linear model on telemetry predicts 7-day failure,ML: logistic regression (balanced),precision / recall / ROC AUC,0.50 / 0.71 / 0.86,Balanced weights raise recall but create many false alarms (low precision)
