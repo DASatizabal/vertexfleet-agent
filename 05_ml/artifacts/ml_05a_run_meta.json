@@ -1,0 +1,22 @@
+{
+  "name": "ml_05a",
+  "created_utc": "2026-11-17T01:09:00.741748+00:00",
+  "seed": 42,
+  "project_version": "0.1.0",
+  "config_sha256": "11f73e4453dd23907d31dd5fe35e34a139b474d9defcb896ac8b9c270912ef90",
+  "git_commit": "9e53152d5ff1eab023f0a3d77f4c41cd7a1bdb07",
+  "git_uncommitted_changes": true,
+  "python_version": "3.11.4",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "pydantic": "2.14.3"
+  },
+  "extra": {
+    "failure_model": "Stacking (logit + RF + HGB)",
+    "demand_model": "Gradient boosting",
+    "failure_pr_auc": 0.632,
+    "demand_rmse": 3.255
+  }
+}

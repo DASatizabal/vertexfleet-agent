@@ -8,3 +8,4 @@ logs/*.jsonl
 data/raw/*
 !data/raw/.gitkeep
 mlruns/
+mlflow.db

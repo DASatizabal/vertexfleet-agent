@@ -27,8 +27,8 @@ agent:
   allowed_tools: [query_fleet_db, lookup_service_history, write_report, propose_action]
 
 models:
-  demand_forecaster: {name: baseline_mean, version: "0.0.1"}
-  failure_classifier: {name: baseline_logistic, version: "0.0.1"}
+  demand_forecaster: {name: gradient_boosting, version: "1.0.0", artifact: 05_ml/artifacts/demand_forecaster.joblib}
+  failure_classifier: {name: stacking_isotonic, version: "1.0.0", artifact: 05_ml/artifacts/failure_classifier.joblib, alert_threshold: 0.23}
   maintenance_note_nlp: {name: tfidf_baseline, version: "0.0.1"}
 
 features:

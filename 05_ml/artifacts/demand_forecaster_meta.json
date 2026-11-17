@@ -1,0 +1,26 @@
+{
+  "name": "Gradient boosting",
+  "version": "1.0.0",
+  "artifact": "demand_forecaster.joblib",
+  "input_schema": {
+    "hour_sin": "float64",
+    "hour_cos": "float64",
+    "is_weekend": "int64",
+    "rain": "int64",
+    "temp_c": "float64",
+    "lag_24h": "float64",
+    "lag_168h": "float64",
+    "mean_24h": "float64",
+    "zone": "str"
+  },
+  "target": "trips",
+  "training_rows": 12096,
+  "training_data_hash": "03f9a16bfdca1aa8",
+  "test_metrics": {
+    "test_rmse": 3.255,
+    "test_mae": 2.489,
+    "test_r2": 0.746
+  },
+  "explanation": "residual plots in 05a notebook",
+  "selected_by": "cross-validated score on training period"
+}
